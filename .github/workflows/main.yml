@@ -34,6 +34,9 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
+      - uses: anchore/sbom-action@v0
+        with:
+          artifact-name: sbom.spdx
       - name: gh-action-spdx-sbom-generator
         uses: Anji6789/gh-action-spdx-sbom-generator@v1.0.0
         with:
